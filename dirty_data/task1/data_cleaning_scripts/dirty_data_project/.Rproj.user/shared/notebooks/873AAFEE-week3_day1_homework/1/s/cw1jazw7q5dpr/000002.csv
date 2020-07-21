@@ -1,0 +1,7 @@
+"0","```r
+drink_calories <- drinks %>%
+  mutate(calorie_diff = 135 - Calories)
+```"
+"1","Error in drinks %>% mutate(calorie_diff = 135 - Calories) : 
+  could not find function \"%>%\"
+"

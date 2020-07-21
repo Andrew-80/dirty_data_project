@@ -1,0 +1,10 @@
+"0","```r
+most_calories <- drink_calories %>%
+  group_by(Beverage_category) %>%
+  summarise(mean_calories = mean(Calories)) %>%
+  arrange(desc(mean_calories)) %>%
+  head(3)
+```"
+"1","Error in drink_calories %>% group_by(Beverage_category) %>% summarise(mean_calories = mean(Calories)) %>%  : 
+  could not find function \"%>%\"
+"

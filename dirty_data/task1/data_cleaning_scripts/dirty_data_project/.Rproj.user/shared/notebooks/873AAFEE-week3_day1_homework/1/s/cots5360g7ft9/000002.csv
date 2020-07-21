@@ -1,0 +1,7 @@
+"0","```r
+starbucks_drink_calories <- select(starbucks_drink, 'Beverage_category', 'Beverage', 'Beverage_prep', 'Calories') %>%
+        drop_na(Calories)
+```"
+"1","Error in select(starbucks_drink, \"Beverage_category\", \"Beverage\", \"Beverage_prep\",  : 
+  could not find function \"%>%\"
+"

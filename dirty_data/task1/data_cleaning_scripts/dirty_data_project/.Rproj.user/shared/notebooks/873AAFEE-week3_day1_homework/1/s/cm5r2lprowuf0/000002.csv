@@ -1,0 +1,5 @@
+"0","```r
+
+calorie_diff = mutate(starbucks_drink_calories, calorie_diff = Calories - 135  )
+calorie_diff
+```"

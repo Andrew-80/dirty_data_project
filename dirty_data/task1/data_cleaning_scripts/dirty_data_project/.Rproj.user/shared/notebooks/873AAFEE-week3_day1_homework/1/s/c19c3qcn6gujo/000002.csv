@@ -1,0 +1,8 @@
+"0","```r
+drinks <- drinks_content %>%
+  select(Beverage_category, Beverage, Beverage_prep, Calories) %>%
+  mutate(is_empty = is.na(Calories)) 
+```"
+"1","Error in drinks_content %>% select(Beverage_category, Beverage, Beverage_prep,  : 
+  could not find function \"%>%\"
+"

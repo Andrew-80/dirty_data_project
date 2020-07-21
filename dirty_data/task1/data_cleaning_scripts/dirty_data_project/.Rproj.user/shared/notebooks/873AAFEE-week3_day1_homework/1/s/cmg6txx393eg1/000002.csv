@@ -1,0 +1,4 @@
+"0","```r
+starbucks_drink <- read.csv(\"starbucks_drinkMenu_expanded.csv\")
+starbucks_drink
+```"

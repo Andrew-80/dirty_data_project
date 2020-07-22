@@ -1,8 +1,0 @@
-"0","```r
-pattern <- \"[Tt]hought [Pp]olice\"
-
-whole_text %>%
-  str_detect(pattern)
-```"
-"1","[1] TRUE
-"

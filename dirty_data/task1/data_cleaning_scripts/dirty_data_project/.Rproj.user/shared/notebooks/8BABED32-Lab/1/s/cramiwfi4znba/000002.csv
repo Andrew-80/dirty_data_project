@@ -1,8 +1,0 @@
-"0","```r
-pattern <- \"[Jj]ulia\"
-
-whole_text %>%
-  str_detect(pattern)
-```"
-"1","[1] FALSE
-"

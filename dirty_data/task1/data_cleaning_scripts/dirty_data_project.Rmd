@@ -1,0 +1,83 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+install.packages("here")
+```
+
+
+Task 1 - Decathlon Data
+```{r}
+decathlon <- read_rds("decathlon.rds")
+decathlon
+
+```
+
+```{r}
+head(decathlon)
+dim(decathlon)
+names(dim(decathlon))
+glimpse(decathlon)
+names(decathlon)
+decathlon
+
+```
+
+
+```{r}
+names(decathlon)
+```
+
+```{r}
+view(decathlon)
+```
+
+
+1.1.1 Cleaning
+
+```{r}
+#row names in 1st column, athlete names to lower case
+decathlon_athlete <- rownames_to_column(decathlon, "athlete") %>%
+  janitor::clean_names() %>%
+  mutate(athlete = str_to_lower(athlete))
+decathlon_athlete
+```
+
+
+```{r}
+view(decathlon_athlete)
+```
+
+```{r}
+#spelling correction
+colnames(decathlon_athlete)[colnames(decathlon_athlete) == "javeline"] <- "javelin"
+decathlon_athlete
+```
+
+```{r}
+unique(decathlon_athlete$athlete)
+
+```
+
+
+```{r}
+write_rds(decathlon_athlete, here::here("decathlon_data_cleaned.rds"))
+```
+
+
+
+

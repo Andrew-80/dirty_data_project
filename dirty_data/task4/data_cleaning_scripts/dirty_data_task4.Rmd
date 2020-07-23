@@ -138,9 +138,54 @@ dim(candy_2017_clean)
 
 ```
 
+# pivot long on 3 data
+```{r}
+candy_2015_clean_long <- pivot_longer(data = candy_2015_clean_reordered[,1:98],
+cols = 5:97,
+names_to = "column_candy",
+values_to = "value")
+
+```
+
+```{r}
+candy_2016_clean_long <- pivot_longer(data = candy_2016_clean[,1:105],
+cols = 5:104,
+names_to = "column_candy",
+values_to = "value")
 
 
+```
 
+```{r}
+candy_2017_clean_long <- pivot_longer(data = candy_2017_clean[,1:108],
+cols = 5:107,
+names_to = "column_candy",
+values_to = "value")
+
+```
+
+```{r}
+view(candy_2015_clean_long)
+```
+
+```{r}
+view(candy_2016_clean_long)
+```
+
+```{r}
+view(candy_2017_clean_long)
+
+```
+
+
+# Join all 2015, 2016, 2017 into 1 dataset
+
+```{r}
+candy_all_years_clean <- rbind(candy_2015_clean_long,
+                               candy_2016_clean_long,
+                               candy_2017_clean_long)
+view(candy_all_years_clean)
+```
 
 
 

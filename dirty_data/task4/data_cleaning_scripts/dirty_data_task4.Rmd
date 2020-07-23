@@ -101,12 +101,54 @@ typeof(candy_2017_clean)
 
 ```
 
-# Year column
+# Year column cleaned
 ```{r}
-
-
+candy_2015_clean$year = "2015"
+candy_2016_clean$year = "2016"
+candy_2017_clean$year = "2017"
 
 ```
+
+# Missing columns in 2015 with no values 
+```{r}
+candy_2015_clean$country = ''
+candy_2015_clean$gender = ''
+
+```
+
+# Reorder 2015 columns
+```{r}
+candy_2015_clean_reordered <- candy_2015_clean[, c(2, 98, 1, 97, 3:96)]
+#view(candy_2015_clean_reordered)
+```
+
+#View cleaned data
+```{r}
+view(candy_2015_clean_reordered)
+view(candy_2016_clean)
+view(candy_2017_clean)
+
+```
+
+
+```{r}
+dim(candy_2015_clean_reordered)
+dim(candy_2016_clean)
+dim(candy_2017_clean)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

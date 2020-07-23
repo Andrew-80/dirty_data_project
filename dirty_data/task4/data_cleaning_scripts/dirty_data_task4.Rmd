@@ -3,17 +3,110 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+```{r}
+library(readr)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+library(janitor)
+```
+
+
+```{r}
+install.packages("here")
+```
+
+```{r}
+install.packages("readxl")
+```
+
+```{r}
+library(readxl)
+```
+
+
+Task 4 - Decathlon Data
+```{r}
+candy_2015 <- read_excel("boing-boing-candy-2015.xlsx")
+candy_2015
+
+```
+
+```{r}
+head(candy_2015)
+dim(candy_2015)
+names(dim(candy_2015))
+names(candy_2015)
+```
+
+```{r}
+view(candy_2015)
+```
+
+
+```{r}
+candy_2016 <- read_excel("boing-boing-candy-2016.xlsx")
+candy_2016
+```
+
+```{r}
+candy_2017 <- read_excel("boing-boing-candy-2017.xlsx")
+candy_2017
+```
+
+# select and clean columns by position
+```{r}
+candy_2015_clean <- candy_2015 %>%
+select(c(2:96))
+
+```
+
+```{r}
+candy_2016_clean <- candy_2016 %>%
+select(c(2:5,7:106))
+```
+
+```{r}
+candy_2017_clean <- candy_2017 %>%
+select(c(2:5,7:109))
+```
+
+# clean the column names
+```{r}
+candy_2015_clean <- clean_names(candy_2015_clean)
+candy_2016_clean <- clean_names(candy_2016_clean)
+candy_2017_clean <- clean_names(candy_2017_clean)
+
+```
+
+# check data
+```{r}
+#glimpse(candy_2015_clean)
+#glimpse(candy_2016_clean)
+#glimpse(candy_2017_clean)
+
+#Data type
+typeof(candy_2015_clean)
+typeof(candy_2016_clean)
+typeof(candy_2017_clean)
+
+
+```
+
+# Year column
+```{r}
 
 
 
-
-
-
-
-
-
-
-
+```
 
 
 

@@ -3,13 +3,48 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+```{r}
+library(readr)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+library(janitor)
+```
+
+
+```{r}
+candy_all_years_clean <- read_rds("candy_all_years_clean.rds")
+candy_all_years_clean
+```
+
+
+
 1.4.2 Analysis
 
 1. What is the total number of candy ratings given across the three years. (number of candy ratings, not number of raters. Don’t count missing values)
 ```{r}
-
+candy_ratings <- candy_all_years_clean %>%
+  select(rating) %>%
+  filter(rating == "JOY" | rating == "DESPAIR" | rating =="MEH") %>%
+  summarise(rating =n())
+candy_ratings
 
 ```
+
+```{r}
+unique(candy_all_years_clean$rating)
+
+```
+
+
 
 2. What was the average age of people who are going out trick or treating and the average age of people 3. not going trick or treating?
 ```{r}

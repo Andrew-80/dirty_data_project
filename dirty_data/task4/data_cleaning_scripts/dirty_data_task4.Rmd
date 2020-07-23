@@ -223,6 +223,34 @@ candy_all_years_clean <- rbind(candy_2015_clean_long,
 view(candy_all_years_clean)
 ```
 
+
+#country clean up
+#USA
+```{r}
+candy_all_years_country <- candy_all_years_clean %>%
+  mutate(candy_all_years_clean =
+  str_replace_all(candy_all_years_clean, "united states of america", "usa") %>%
+  str_replace_all(candy_all_years_clean, "united states", "usa") %>% 
+  str_replace_all(candy_all_years_clean, "america", "usa") %>%
+        )
+  
+  
+
+```
+
+#Canada
+```{r}
+
+
+```
+
+#UK
+```{r}
+
+
+```
+
+
 # save the cleaned and combined dataset into a new file 
 ```{r}
 write_rds(candy_all_years_clean, here::here("candy_all_years_clean.rds"))

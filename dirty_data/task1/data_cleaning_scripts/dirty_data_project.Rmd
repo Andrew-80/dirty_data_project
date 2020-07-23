@@ -75,7 +75,7 @@ unique(decathlon_athlete$athlete)
 
 # save the cleaned data into a new file
 ```{r}
-write_rds(decathlon_athlete, here::here("decathlon_data_cleaned.rds"))
+write_rds(decathlon_athlete, here::here("decathlon_data_cleaned.csv"))
 ```
 
 

@@ -178,6 +178,42 @@ view(candy_2017_clean_long)
 ```
 
 
+# Column names. Put 2015, 2016, 2017  datasets into the same order with the same column names
+#2015
+```{r}
+colnames(candy_2015_clean_long)[1] <- "trick_or_treat"
+colnames(candy_2015_clean_long)[2] <- "gender"
+colnames(candy_2015_clean_long)[3] <- "age"
+colnames(candy_2015_clean_long)[4] <- "country"
+colnames(candy_2015_clean_long)[5] <- "year"
+colnames(candy_2015_clean_long)[6] <- "candy"
+colnames(candy_2015_clean_long)[7] <- "rating"
+
+```
+
+#2016
+```{r}
+colnames(candy_2016_clean_long)[1] <- "trick_or_treat"
+colnames(candy_2016_clean_long)[2] <- "gender"
+colnames(candy_2016_clean_long)[3] <- "age"
+colnames(candy_2016_clean_long)[4] <- "country"
+colnames(candy_2016_clean_long)[5] <- "year"
+colnames(candy_2016_clean_long)[6] <- "candy"
+colnames(candy_2016_clean_long)[7] <- "rating"
+```
+
+#2017
+```{r}
+colnames(candy_2017_clean_long)[1] <- "trick_or_treat"
+colnames(candy_2017_clean_long)[2] <- "gender"
+colnames(candy_2017_clean_long)[3] <- "age"
+colnames(candy_2017_clean_long)[4] <- "country"
+colnames(candy_2017_clean_long)[5] <- "year"
+colnames(candy_2017_clean_long)[6] <- "candy"
+colnames(candy_2017_clean_long)[7] <- "rating"
+```
+
+
 # Join all 2015, 2016, 2017 into 1 dataset
 
 ```{r}
@@ -187,7 +223,10 @@ candy_all_years_clean <- rbind(candy_2015_clean_long,
 view(candy_all_years_clean)
 ```
 
-
+# save the cleaned and combined dataset into a new file 
+```{r}
+write_rds(candy_all_years_clean, here::here("candy_all_years_clean.rds"))
+```
 
 
 

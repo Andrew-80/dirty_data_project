@@ -1,0 +1,80 @@
+---
+title: "dirty_data_task1"
+output: html_document
+---
+
+# 1.Introduction
+
+Dataset is of athletes competing over 2 competitions over track and field events.
+
+
+
+# 2. Assumptions
+None? It seemed fairly straight forwards
+
+
+
+
+
+# 3. Steps to clean data
+1. Adding a title to the althlete column
+2. CLean up the titles of the vectors, some were spelt incorrectly.
+
+
+
+# 4. Answers
+
+Q. 1. Who had the longest long jump seen in the data?
+A. sebrle	7.58
+
+Q. 2. What was the average 100m time in each competition?
+A. Decastar - 11.17538. OlympicG - 10.91571
+
+
+Q. 3. Who had the highest total points across both competitions?
+A.
+a. sebrle	OlympicG	8893	
+b. sebrle	Decastar	8217
+
+Q. 4. What was the shot-put scores for the top three competitors in each competition?
+A. 
+
+1	sebrle	16.36	8893	OlympicG
+2	karpov	15.93	8725	OlympicG
+3	macey	15.73	8414	OlympicG
+
+1	yurkov	15.19	8036	Decastar
+2	sebrle	14.83	8217	Decastar
+3	karpov	14.77	8099	Decastar
+
+Q. What was the average points for competitors who ran the 400m in less than 50 seconds vs. those than ran 400m in more than 50 seconds?
+A
+
+average_more_than_50 - 7727.167	
+average_less_than_50 - 8120.483
+
+
+# 5. Analysis or conclusion
+
+This was challenge and consolidation of the last 4 weeks classes. I got there!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

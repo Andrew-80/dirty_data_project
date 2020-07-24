@@ -3,16 +3,37 @@ title: "dirty_data_task4"
 output: html_document
 ---
 
-#1. Introduction
+# 1.Introduction
+
+The database was a unclean. Over the last 3 years it has evolved with columns added for more information. 
+Items in columns such as in the country was a mess, a free text box esp for the USA came up with over 30 items.
+
+
+
+# 2. Assumptions
 
 
 
 
 
 
+# 3. Steps to clean data
 
 
 
+
+
+
+# 4. Answers
+
+Q. 1. What is the total number of candy ratings given across the three years. (number of candy ratings, not number of raters. Don’t count missing values)
+A. rating - 762355
+
+Q. What was the average age of people who are going out trick or treating and the average age of people 3. not going trick or treating?
+A.
+
+
+# 5. Analysis or conclusion
 
 
 

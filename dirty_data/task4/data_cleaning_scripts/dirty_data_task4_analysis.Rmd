@@ -29,7 +29,7 @@ candy_all_years_clean
 
 1.4.2 Analysis
 
-1. What is the total number of candy ratings given across the three years. (number of candy ratings, not number of raters. Don’t count missing values)
+# 1. What is the total number of candy ratings given across the three years. (number of candy ratings, not number of raters. Don’t count missing values)
 ```{r}
 candy_ratings <- candy_all_years_clean %>%
   select(rating) %>%
@@ -45,13 +45,23 @@ unique(candy_all_years_clean$rating)
 ```
 
 
-
-2. What was the average age of people who are going out trick or treating and the average age of people 3. not going trick or treating?
+# 2. What was the average age of people who are going out trick or treating and the average age of people 3. not going trick or treating?
 ```{r}
-
+age_trick_or_treat <- candy_all_years_clean %>%
+  select(age)  %>%
+mean(andy_all_years_clean$age)
+age_trick_or_treat
 
 ```
 
+
+
+# 3. For each of joy, despair and meh, which candy bar revived the most of these ratings?
+```{r}
+
+
+
+```
 
 
 

@@ -234,7 +234,6 @@ candy_all_years_country <- candy_all_years_clean %>%
   str_replace_all(candy_all_years_clean, "america", "usa") %>%
         )
   
-  
 
 ```
 
@@ -251,9 +250,16 @@ candy_all_years_country <- candy_all_years_clean %>%
 ```
 
 
-# save the cleaned and combined dataset into a new file 
 ```{r}
-write_rds(candy_all_years_clean, here::here("candy_all_years_clean.rds"))
+str_replace_all(candy_all_years_clean, "JOY", "joy")
+str_replace_all(candy_all_years_clean, "DESPAIR", "despair")
+str_replace_all(candy_all_years_clean, "MEH", "meh")
+```
+
+
+# save the cleaned and combined dataset into a new .csv file 
+```{r}
+write_rds(candy_all_years_clean, here::here("candy_all_years_clean.csv"))
 ```
 
 

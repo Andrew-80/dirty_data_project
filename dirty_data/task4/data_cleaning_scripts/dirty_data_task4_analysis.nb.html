@@ -1801,9 +1801,8 @@ candy_all_years_clean</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>1.4.2 Analysis</p>
-<ol style="list-style-type: decimal">
-<li>What is the total number of candy ratings given across the three years. (number of candy ratings, not number of raters. Don’t count missing values)</li>
-</ol>
+<div id="what-is-the-total-number-of-candy-ratings-given-across-the-three-years.-number-of-candy-ratings-not-number-of-raters.-dont-count-missing-values" class="section level1">
+<h1>1. What is the total number of candy ratings given across the three years. (number of candy ratings, not number of raters. Don’t count missing values)</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2FuZHlfcmF0aW5ncyA8LSBjYW5keV9hbGxfeWVhcnNfY2xlYW4gJT4lXG4gIHNlbGVjdChyYXRpbmcpICU+JVxuICBmaWx0ZXIocmF0aW5nID09IFwiSk9ZXCIgfCByYXRpbmcgPT0gXCJERVNQQUlSXCIgfCByYXRpbmcgPT1cIk1FSFwiKSAlPiVcbiAgc3VtbWFyaXNlKHJhdGluZyA9bigpKVxuY2FuZHlfcmF0aW5nc1xuYGBgIn0= -->
@@ -1835,16 +1834,37 @@ candy_ratings</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<ol start="2" style="list-style-type: decimal">
-<li>What was the average age of people who are going out trick or treating and the average age of people 3. not going trick or treating?</li>
-</ol>
+</div>
+<div id="what-was-the-average-age-of-people-who-are-going-out-trick-or-treating-and-the-average-age-of-people-3.-not-going-trick-or-treating" class="section level1">
+<h1>2. What was the average age of people who are going out trick or treating and the average age of people 3. not going trick or treating?</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWdlX3RyaWNrX29yX3RyZWF0IDwtIGNhbmR5X2FsbF95ZWFyc19jbGVhbiAlPiUgXG5tZWFuKGFuZHlfYWxsX3llYXJzX2NsZWFuJGFnZSlcbmBgYCJ9 -->
+<pre class="r"><code>age_trick_or_treat &lt;- candy_all_years_clean %&gt;% 
+mean(andy_all_years_clean$age)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiYXJndW1lbnQgaXMgbm90IG51bWVyaWMgb3IgbG9naWNhbDogcmV0dXJuaW5nIE5BXG4ifQ== -->
+<pre><code>argument is not numeric or logical: returning NA</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWdlX3RyaWNrX29yX3RyZWF0XG5gYGAifQ== -->
+<pre class="r"><code>age_trick_or_treat</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIE5BXG4ifQ== -->
+<pre><code>[1] NA</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="for-each-of-joy-despair-and-meh-which-candy-bar-revived-the-most-of-these-ratings" class="section level1">
+<h1>3. For each of joy, despair and meh, which candy bar revived the most of these ratings?</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkocmVhZHIpCmBgYAoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KGRwbHlyKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KGphbml0b3IpCmBgYAoKCmBgYHtyfQpjYW5keV9hbGxfeWVhcnNfY2xlYW4gPC0gcmVhZF9yZHMoImNhbmR5X2FsbF95ZWFyc19jbGVhbi5yZHMiKQpjYW5keV9hbGxfeWVhcnNfY2xlYW4KYGBgCgoKCjEuNC4yIEFuYWx5c2lzCgoxLiBXaGF0IGlzIHRoZSB0b3RhbCBudW1iZXIgb2YgY2FuZHkgcmF0aW5ncyBnaXZlbiBhY3Jvc3MgdGhlIHRocmVlIHllYXJzLiAobnVtYmVyIG9mIGNhbmR5IHJhdGluZ3MsIG5vdCBudW1iZXIgb2YgcmF0ZXJzLiBEb27igJl0IGNvdW50IG1pc3NpbmcgdmFsdWVzKQpgYGB7cn0KY2FuZHlfcmF0aW5ncyA8LSBjYW5keV9hbGxfeWVhcnNfY2xlYW4gJT4lCiAgc2VsZWN0KHJhdGluZykgJT4lCiAgZmlsdGVyKHJhdGluZyA9PSAiSk9ZIiB8IHJhdGluZyA9PSAiREVTUEFJUiIgfCByYXRpbmcgPT0iTUVIIikgJT4lCiAgc3VtbWFyaXNlKHJhdGluZyA9bigpKQpjYW5keV9yYXRpbmdzCgpgYGAKCmBgYHtyfQp1bmlxdWUoY2FuZHlfYWxsX3llYXJzX2NsZWFuJHJhdGluZykKCmBgYAoKCgoyLiBXaGF0IHdhcyB0aGUgYXZlcmFnZSBhZ2Ugb2YgcGVvcGxlIHdobyBhcmUgZ29pbmcgb3V0IHRyaWNrIG9yIHRyZWF0aW5nIGFuZCB0aGUgYXZlcmFnZSBhZ2Ugb2YgcGVvcGxlIDMuIG5vdCBnb2luZyB0cmljayBvciB0cmVhdGluZz8KYGBge3J9CgoKYGBgCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkocmVhZHIpCmBgYAoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KGRwbHlyKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KGphbml0b3IpCmBgYAoKCmBgYHtyfQpjYW5keV9hbGxfeWVhcnNfY2xlYW4gPC0gcmVhZF9yZHMoImNhbmR5X2FsbF95ZWFyc19jbGVhbi5yZHMiKQpjYW5keV9hbGxfeWVhcnNfY2xlYW4KYGBgCgoKCjEuNC4yIEFuYWx5c2lzCgojIDEuIFdoYXQgaXMgdGhlIHRvdGFsIG51bWJlciBvZiBjYW5keSByYXRpbmdzIGdpdmVuIGFjcm9zcyB0aGUgdGhyZWUgeWVhcnMuIChudW1iZXIgb2YgY2FuZHkgcmF0aW5ncywgbm90IG51bWJlciBvZiByYXRlcnMuIERvbuKAmXQgY291bnQgbWlzc2luZyB2YWx1ZXMpCmBgYHtyfQpjYW5keV9yYXRpbmdzIDwtIGNhbmR5X2FsbF95ZWFyc19jbGVhbiAlPiUKICBzZWxlY3QocmF0aW5nKSAlPiUKICBmaWx0ZXIocmF0aW5nID09ICJKT1kiIHwgcmF0aW5nID09ICJERVNQQUlSIiB8IHJhdGluZyA9PSJNRUgiKSAlPiUKICBzdW1tYXJpc2UocmF0aW5nID1uKCkpCmNhbmR5X3JhdGluZ3MKCmBgYAoKYGBge3J9CnVuaXF1ZShjYW5keV9hbGxfeWVhcnNfY2xlYW4kcmF0aW5nKQoKYGBgCgoKIyAyLiBXaGF0IHdhcyB0aGUgYXZlcmFnZSBhZ2Ugb2YgcGVvcGxlIHdobyBhcmUgZ29pbmcgb3V0IHRyaWNrIG9yIHRyZWF0aW5nIGFuZCB0aGUgYXZlcmFnZSBhZ2Ugb2YgcGVvcGxlIDMuIG5vdCBnb2luZyB0cmljayBvciB0cmVhdGluZz8KYGBge3J9CmFnZV90cmlja19vcl90cmVhdCA8LSBjYW5keV9hbGxfeWVhcnNfY2xlYW4gJT4lCiAgc2VsZWN0KGFnZSkgICU+JQptZWFuKGFuZHlfYWxsX3llYXJzX2NsZWFuJGFnZSkKYWdlX3RyaWNrX29yX3RyZWF0CgpgYGAKCgoKIyAzLiBGb3IgZWFjaCBvZiBqb3ksIGRlc3BhaXIgYW5kIG1laCwgd2hpY2ggY2FuZHkgYmFyIHJldml2ZWQgdGhlIG1vc3Qgb2YgdGhlc2UgcmF0aW5ncz8KYGBge3J9CgoKCmBgYAoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCg==</div>
 
 
 
